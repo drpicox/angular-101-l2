@@ -2,4 +2,6 @@ Think in a number: <br>
 <input type="number" ng-model="vm.number"><br>
 
 <button ng-click="vm.guess()">Guess</button><br>
-<div ng-show="vm.guessed">My number is {{vm.result}}!</div><br>
+<div ng-show="vm.guessed">
+	<ga-guess-result data-result="vm.result"></ga-guess-result>
+</div><br>
