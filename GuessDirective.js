@@ -21,14 +21,8 @@
 	function GuessController  ( guesserState ) {
 		var vm = this;
 
-		vm.number = 0;		
-		vm.guessed = false;
-		vm.result = '';
-		vm.guess = guess;//()
-
-		function guess() {
-			vm.result = guesserState.guess(vm.number);
-			vm.guessed = true;
-		}
+		vm.number = 0;
+		vm.guesser = guesserState;		
 	}
+	
 })();

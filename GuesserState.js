@@ -7,7 +7,8 @@
 
 	function GuesserStateFactory() {
 		var state = {
-			guess: guess,
+			history: [],//[{number:, result:, attemptNo:}]
+			guess: guess,//(number)
 		};
 
 		var secret = Math.ceil(Math.random() * 10);
@@ -24,6 +25,8 @@
 			} else if (secret > number) {
 				result = +1;
 			}
+
+			state.history.push({number:number, result:result, attemptNo: state.history.length + 1});
 			return result;
 		}
 	}

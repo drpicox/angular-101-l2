@@ -1,7 +1,5 @@
 Think in a number: <br>
 <input type="number" ng-model="vm.number"><br>
 
-<button ng-click="vm.guess()">Guess</button><br>
-<div ng-show="vm.guessed">
-	<ga-guess-result data-result="vm.result"></ga-guess-result>
-</div><br>
+<button ng-click="vm.guesser.guess(vm.number)">Guess</button><br>
+<ga-guess-history data-history="vm.guesser.history"></ga-guess-history>

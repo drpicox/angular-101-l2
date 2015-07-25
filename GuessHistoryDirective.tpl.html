@@ -1,0 +1,7 @@
+<ul>
+	<li ng-repeat="entry in vm.history track by entry.attemptNo">
+		{{entry.attemptNo}}:
+		Your number was {{entry.number}}.
+		<ga-guess-result data-result="entry.result"></ga-guess-result>
+	</li>
+</ul>
