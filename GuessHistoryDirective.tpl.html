@@ -1,7 +1,10 @@
-<ul>
-	<li ng-repeat="entry in vm.history track by entry.attemptNo">
-		{{entry.attemptNo}}:
-		Your number was {{entry.number}}.
-		<ga-guess-result data-result="entry.result"></ga-guess-result>
+<ul class="list-group">
+	<li ng-repeat="entry in vm.history track by entry.attemptNo" class="list-group-item" 
+	ng-class="{'list-group-item-success': entry.result === 0}">
+		<span class="badge">{{entry.attemptNo}}</span>
+		<h5 class="list-group-item-heading">
+			<ga-guess-result data-result="entry.result"></ga-guess-result>
+		</h5>
+		<p class="list-group-item-text text-muted">Your number was {{entry.number}}.</p>
 	</li>
 </ul>
