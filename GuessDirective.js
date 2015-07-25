@@ -17,8 +17,8 @@
 		return directive;
 	}
 
-	GuessController.$inject = ['guessState'];
-	function GuessController  ( guessState ) {
+	GuessController.$inject = ['guesserState'];
+	function GuessController  ( guesserState ) {
 		var vm = this;
 
 		vm.number = 0;		
@@ -26,10 +26,8 @@
 		vm.result = '';
 		vm.guess = guess;//()
 
-		var secret = Math.ceil(Math.random() * 10);
-
 		function guess() {
-			vm.result = guessState.guess(vm.number);
+			vm.result = guesserState.guess(vm.number);
 			vm.guessed = true;
 		}
 	}

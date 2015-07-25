@@ -3,9 +3,9 @@
 
 	angular
 		.module('guessApp')
-		.factory('guessState', GuessStateFactory);
+		.factory('guesserState', GuesserStateFactory);
 
-	function GuessStateFactory() {
+	function GuesserStateFactory() {
 		var state = {
 			guess: guess,
 		};
